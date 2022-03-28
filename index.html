@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-foundation.min.css" integrity="sha512-FxxtEcqC30sYnk1uvdsbiBuRRAOjXQlSc/YPN5d9oVTBhsuqy3ptkPqkXinxwpscyhQz8I9BLa+EhlvxtwFTGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
 
   <body>
     <header class="jumbotron">
@@ -28,12 +20,98 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+
+    
+    <main class="col-12 container d-flex flex-column">
+      <!-- Timeboxes start -->
+      <div class="row time-block" id="hour8">
+        <h2 class="col-1 hour">8 AM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour9">
+        <h2 class="col-1 hour">9 AM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour10">
+        <h2 class="col-1 hour">10 AM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour11">
+        <h2 class="col-1 hour">11 AM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour12">
+        <h2 class="col-1 hour">Noon</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+      
+      <div class="row time-block" id="hour13">
+        <h2 class="col-1 hour">1 PM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour14">
+        <h2 class="col-1 hour">2 PM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour15">
+        <h2 class="col-1 hour">3 PM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour16">
+        <h2 class="col-1 hour">4 PM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="row time-block" id="hour17">
+        <h2 class="col-1 hour">5 PM</h2>
+        <textarea class="col-8 w-100 description"></textarea>
+        <button class="col-1 saveBtn">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+      <!-- timeboxes end -->
+
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
