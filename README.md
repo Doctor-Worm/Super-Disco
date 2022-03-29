@@ -21,3 +21,28 @@ SO THAT I can manage my time effectively
     - THEN the text for that event is saved in local storage
 - WHEN I refresh the page
     - THEN the saved events persist
+
+<br>
+
+___
+
+<br>
+
+## Challenges Faced
+- Figuring out how to connect the submit button to the text inside the div next to the button was confusing at first, until I was able to understand the parent, siblings, and children methods.
+- Making sure I looped through all of the local storage and make sure each key was appened back to the right place.
+- Also, I had to make sure that everything in the script.js was in it's proper order so everything functioned correctly.
+
+<br>
+
+## *Links to GitHub repository, the active website, and a screenshot of the website:*
+
+<br>
+
+- **[Link to the GitHub Repository](https://github.com/Doctor-Worm/Super-Disco)**
+
+- **[Friendly Parakeet Active Website](https://doctor-worm.github.io/Super-Disco/)**
+
+<br>
+
+![Website Screenshot](./assets/images/super-disco.png)

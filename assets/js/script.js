@@ -3,53 +3,26 @@ var time = moment().format('dddd, MMMM Do');
 $('#currentDay').text(time);
 
 
-// var timeBlock = $('.time-block');
+// list of each time block's text in storage, getItem, and restore to screen
+$('#hour8 .description').val(localStorage.getItem('hour8'));
+$('#hour9 .description').val(localStorage.getItem('hour9'));
+$('#hour10 .description').val(localStorage.getItem('hour10'));
+$('#hour11 .description').val(localStorage.getItem('hour11'));
+$('#hour12 .description').val(localStorage.getItem('hour12'));
+$('#hour13 .description').val(localStorage.getItem('hour13'));
+$('#hour14 .description').val(localStorage.getItem('hour14'));
+$('#hour15 .description').val(localStorage.getItem('hour15'));
+$('#hour16 .description').val(localStorage.getItem('hour16'));
+$('#hour17 .description').val(localStorage.getItem('hour17'));
 
-// cycle through all time-blocks and add id to each
-// var timeBlock = $('.time-block');
-// for (i = 0; i < timeBlock.length; i++) {
-//     console.log(timeBlock.value);
-// }
-// check to see if each time-block row is past, present, or future and set background color accordingly
-
-
-// description text was clicked
-// $(".description").on("click", "textarea", function() {
-//     var text = $(this).text().trim();
-
-
-
-// var saveTasks = function() {
-//     localStorage.setItem("tasks", JSON.stringify(tasks));
-//   };
-
-
-// var auditTime = function() {
-//     // get date from task element
-//     var date = $('.time-block').find("id").text().trim();
-//     // ensure it worked
-//     console.log(date);
-// }
-// auditTime();
-    // remove any old classes from element
-    // $(timeBlock).removeClass("list-group-item-warning list-group-item-danger");
-  
-    // apply new class if task is near/over due date
-    // if (moment().isAfter(time)) {
-//     //   $(taskEl).addClass("list-group-item-danger");
-//     }
-//     else if (Math.abs(moment().diff(time, "days")) <= 2) {
-//       $(taskEl).addClass("list-group-item-warning");
-//     }
-//   };
 
 // set background colors according to current time
+function adjustTimeBlocks() {
 $('.time-block').each(function() {
     var currentTime = moment().hour();
     var id = parseInt($(this).attr('id').split('hour')[1]);
     console.log(currentTime);
     console.log(id);
-
 
     if (currentTime < id) {
         console.log("isBefore")
@@ -69,8 +42,34 @@ $('.time-block').each(function() {
         $(this).find('.description').removeClass('past');
         $(this).find('.description').removeClass('future');
     }
+})
+};
+
+
+// Iterate through saved tasks array and create task elements on the page
+function loadTime() {
+for (i = 0; i < localStorage.length; i++) {
+    var blockText = localStorage.getItem(localStorage.key[i]);
+    if (!blockText) {
+        return false
+    } else {
+    $(this).find('.description').val(localStorage.getItem(localStorage.key[i]));
+    }
+    }
+};
+
+
+// Button text was clicked
+$(".saveBtn").on("click", function() {
+    var text = $(this).siblings('.description').val().trim();
+    var hour = $(this).parent().attr('id');
+    console.log(text);
+    console.log(hour);
+
+    localStorage.setItem(hour, text);
 });
 
-  $('.saveBtn').click(function() {
-      console.log('push');
-  });
+
+adjustTimeBlocks();
+
+loadTime();
