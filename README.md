@@ -41,7 +41,7 @@ ___
 
 - **[Link to the GitHub Repository](https://github.com/Doctor-Worm/Super-Disco)**
 
-- **[Friendly Parakeet Active Website](https://doctor-worm.github.io/Super-Disco/)**
+- **[Active Website](https://doctor-worm.github.io/Super-Disco/)**
 
 <br>
 
